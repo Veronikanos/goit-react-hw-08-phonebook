@@ -14,6 +14,7 @@ export const Filter = () => {
 
   return (
     <div>
+      <hr />
       <label>
         <input
           type="text"

@@ -28,3 +28,8 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
+
+.contactInfo {
+  margin: 30px 10px 10px;
+  color: #4e6141;
+}
