@@ -1,4 +1,4 @@
-# Homework 8 by React course, GoIT school - Phonebook
+# Homework 8 by React course, GoIT school - Phonebook - SPA
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
@@ -6,36 +6,46 @@ This project was bootstrapped with
 You can find live page
 [here](https://veronikanos.github.io/goit-react-hw-08-phonebook/).
 
-There is a updated task from
-[this repository](https://veronikanos.github.io/goit-react-hw-04-phonebook/) and
-refactored with Redux toolkit. Styling is done by CSS modules. Contacts are
-saved to browser's local storage so there are saved after the page is refreshed
+There is a updated task from [this repository](https://veronikanos.github.io/goit-react-hw-04-phonebook/) and
+refactored with Redux toolkit, React Router v6. Styling is done by CSS modules. Contacts are
+saved to browser's local storage with persistor so there are saved after the page is refreshed
 and after the browser is restarted.
+
+Used backend for this task: [here](https://connections-api.herokuapp.com/docs/). It supports all necessary operations on the contact collection, as well as registering, logging in and user update with JWT. 
 
 Styling is done by CSS modules
 
 Coded by Tlostiuk Veronika.
 
-## PHONEBOOK
+## PHONE BOOK
 
-The app display the number of reviews collected for each category. The app
-doesn't save review statistics between different sessions (page refresh).
+#### App's initial view - Home component:
 
-#### App's initial view:
+![Screenshot_7](https://user-images.githubusercontent.com/49239848/214679200-69644cc0-ac4f-440d-94a6-879f64ffcea4.png)
 
-![Screenshot_15](https://user-images.githubusercontent.com/49239848/209429287-c99f6901-f5bc-4351-9c5e-d961d12d3c84.png)
+#### Register page:
+
+![Screenshot_11](https://user-images.githubusercontent.com/49239848/214679442-f72c52bb-33b7-457a-97e0-025278bc7a63.png)
+
+#### Sign In page:
+
+![Screenshot_19](https://user-images.githubusercontent.com/49239848/214680406-dbc71b0e-d7e6-4935-b735-c39f5fe5c748.png)
+
+#### Registered and logged in user is able to show this page and add new contacts to phone book:
+
+![Screenshot_13](https://user-images.githubusercontent.com/49239848/214679890-5926382a-20ce-45a3-967b-4774f949b703.png)
 
 #### Vanilla validation on input fields without possibility to add an ivalid contact:
 
-![Screenshot_13](https://user-images.githubusercontent.com/49239848/209429356-112d520c-9a35-4e43-881a-e9d49f825999.png)
+![Screenshot_16](https://user-images.githubusercontent.com/49239848/214680196-3cca9956-36da-4eaf-baee-51a88fc504c6.png)
 
 #### All contact's list, allowing the user to delete previously saved contacts:
 
-![Screenshot_17](https://user-images.githubusercontent.com/49239848/209429375-7f1002dd-5b0e-4c87-a9fd-351c6bb67207.png)
+![Screenshot_17](https://user-images.githubusercontent.com/49239848/214680506-1976934b-f4c7-47f1-b56c-8405c328944a.png)
 
 #### Filter by contact name:
 
-![Screenshot_16](https://user-images.githubusercontent.com/49239848/209429378-071b9266-dd69-468f-b03e-9996a11dec53.png)
+![Screenshot_18](https://user-images.githubusercontent.com/49239848/214680518-5f76dbaf-29c5-4f6e-b212-cc31107680ce.png)
 
 ---
 
