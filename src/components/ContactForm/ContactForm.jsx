@@ -1,13 +1,26 @@
 import styles from './ContactForm.module.css';
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addContactThunk } from 'redux/contacts/operations/contactsThunk';
+import { Notify } from 'notiflix';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    const isInContact = contacts.some(
+      contact =>
+        contact.name.toLowerCase() ===
+        e.target.elements.name.value.toLowerCase()
+    );
+    if (isInContact) {
+      Notify.warning(`This contact has already exists`);
+      return;
+    }
 
     const newObj = {
       name: e.target.elements.name.value,
@@ -19,7 +32,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit} className={styles.form} autoComplete="off">
       <label>
         <input
           className={styles.inputField}

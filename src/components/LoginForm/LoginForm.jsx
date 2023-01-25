@@ -1,9 +1,11 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { logIn } from 'redux/auth/operations/operation';
+import { selectLoading } from 'redux/contacts/selectors';
 import styles from './LoginForm.module.css';
 
-export const LoginForm = () => {
+const LoginForm = () => {
   const dispatch = useDispatch();
+  const isLoading = useSelector(selectLoading);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -41,9 +43,11 @@ export const LoginForm = () => {
           />
         </label>
       </>
-      <button className={styles.button} type="submit">
+      <button className={styles.button} type="submit" disabled={isLoading}>
         Log In
       </button>
     </form>
   );
 };
+
+export default LoginForm;

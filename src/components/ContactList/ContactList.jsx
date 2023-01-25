@@ -14,13 +14,14 @@ export const ContactList = () => {
         Your phonebook has {users.length} contacts
       </h3>
       <hr />
-      <ul>
+      <ul className={styles.contactList}>
         {contacts.map(item => (
           <li key={item.id} className={styles.contactUser}>
+						<div className={styles.wrapper}>
             <p className={styles.user}>
-              <b>{item.name}</b>
+              <b className={styles.userName}>{item.name}</b>
             </p>
-            <span>{item.number}</span>
+            <span>{item.number}</span></div>
             <button
               type="button"
               onClick={() => dispatch(deleteContactThunk(item.id))}
