@@ -1,10 +1,18 @@
-# Homework 8 by React course, GoIT school - Phonebook - SPA
+# Phonebook
+
+A simple way to keep user's contacts in one place☎
+
+Features:
+- Add contacts
+- Remove contacts
+- Registration and storing the user's own contacts between logins
+- Form validation
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
 You can find live page
-[here](https://veronikanos.github.io/goit-react-hw-08-phonebook/).
+[here](https://veronikanos.github.io/phonebook/)⬅
 
 There is a updated task from [this repository](https://veronikanos.github.io/goit-react-hw-04-phonebook/) and
 refactored with Redux toolkit, React Router v6. Styling is done by CSS modules. Contacts are
